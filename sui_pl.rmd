@@ -2,11 +2,16 @@
 title: "Samobójstwa w latach 1985-2015 - analiza"
 author: "Magdalena Bogacz"
 output:
+  html_document:
+    df_print: paged
+    toc: yes
   pdf_document:
     toc: true
     df_print: kable
 toc-title: "Spis treści"    
 ---
+
+
 # Wstęp
 ## Wprowadzenie
 Przedmiotem niniejszej analizy jest zbiór danych zawierający informacje na temat samobójstw popełnionych na całym świecie w latach 1985-2016. Dane pochodzą ze strony www.kaggle.com i są dostępne pod [tym adresem](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016).
