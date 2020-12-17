@@ -1,5 +1,5 @@
 # suicide-rate-analysis-R
-This repository contains a suicide rate analysis project made using R. The dataset encompasses the suicide data numbers from the whole world during the years 1985-2016.
+This repository contains a suicide rate analysis project made using R and R Markdown. The dataset encompasses the suicide data numbers from the whole world during the years 1985-2016.
 
 Included steps:
 1. Data cleaning & necessary modifications
