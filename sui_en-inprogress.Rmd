@@ -1,5 +1,5 @@
 ---
-title: "Samobójstwa w latach 1985-2015 - analiza"
+title: "The suicide rate analysis in 1985-2015"
 author: "Magdalena Bogacz"
 output:
   html_document:
@@ -11,16 +11,16 @@ output:
 toc-title: Spis treści
 ---
 
-# Wstęp
-## Wprowadzenie
-Przedmiotem niniejszej analizy jest zbiór danych zawierający informacje na temat samobójstw popełnionych na całym świecie w latach 1985-2016. Dane pochodzą ze strony www.kaggle.com i są dostępne pod [tym adresem](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016).
+# Introduction
+## Introduction
+The aim of this analysis is to examine the suicide rates over a 30 years period. The dataset that this analysis is based on has been downloaded from www.kaggle.com and is available [under this URL](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016).
 
 
-## Biblioteki 
-Podczas procesu analizy użyto następujących bibliotek:
+## Libraries 
+Following libraries were used during the analysis process:
 ```{r message=FALSE}
-library("tidyverse")
-library("countrycode")
+library(tidyverse)
+library(countrycode)
 library(gridExtra)
 library(grid)
 library(broom)
@@ -28,9 +28,9 @@ library(knitr)
 ```
 
 
-## Czyszczenie danych - przegląd
+## Data cleaning - an overview
 
-Następnie przystąpiono do implementacji zbioru danych i przestudiowania ich struktury. W tym celu użyto trzech różnych funkcji - summary(), str() oraz glimpse(). Każda z nich podsumowuje dane w nieco inny sposób - funkcja summary() oferuje proste statystyczne podsumowanie każdej zmiennej, funkcja str() dostarcza informacji o strukturze tabeli a funkcja glimpse() oferuje wgląd w dane zawarte w poszczególnych zmiennych.
+After downloading the libraries, the next step was to implement the dataset and analyse it's structure. The quick structural analysis was done using three seperate functions - summary(), str() and glimpse(). Each of them summarizes the dataset structure a little bit differently. The summary() function offers a basic statistical summary of each variable; the str() function provides information about the dataset structure; the glimpse() function offers a quick overview of each variable's values.
 ```{r message=FALSE}
 masterdata <- read_csv("master.csv")
 summary(masterdata)
