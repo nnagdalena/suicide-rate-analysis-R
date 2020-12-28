@@ -38,14 +38,13 @@ str(masterdata)
 glimpse(masterdata)
 ```
 
-
-Poniższy kod zwraca informację o tym, czy w danej tabeli zostały określone poziomy (levels). Jeśli tak jest, kod zwróci ich nazwy, jeśli nie, zwróci komunikat 'NULL'.
+The code below returns the information about the presence of levels in the dataset. If no levels are detected, the code will return the NULL value. Otherwise the code will return name of the levels present. 
 ```{r}
 levels(masterdata)
 ```
 
 
-## Czyszczenie danych - zmienna 'generation'
+## Data cleaning - the 'generation' variable
 
 Po wstępnym przeglądzie zdecydowano się na pominięcie w dalszej analizie zmiennej "generation" (pol. pokolenie). W każdej części świata poszczególne pokolenia są nieco inaczej definiowane - np. definicja tzw. millenialsów (pokolenia X) w Stanach Zjednoczonych i Polsce obejmuje różne grupy wiekowe.
 ```{r}
