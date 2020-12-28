@@ -52,9 +52,10 @@ masterdata %>%
   select(-generation) -> masterdata
 ```
 
-## Czyszczenie danych - wskaźnik HDI
+## Data cleaning - the 'HDI' variable
 
-Podczas wstępnej analizy danych szczególną uwagę zwróciła zmienna 'HDI'. Istnieje w niej wiele pustych rekordów, tak więc podczas dalszej pracy zmienna ta nie odzwierciedlałaby rzeczywistych wyników. 
+
+The code below shows the number of empty values in the HDI' (Human Development Index) variable.
 ```{r}
 masterdata %>% 
   select(`HDI for year`) %>% 
@@ -62,7 +63,7 @@ masterdata %>%
   summarise(n())
 ```
 
-W ostatecznym rozrachunku zdecydowano się ją pominąć.
+It was decided to omit the 'HDI' variable in the further analysis. This variable contains too many empty values to be considered relevant or bring any noteworthy contributions.
 ```{r}
 masterdata %>% 
   select(-`HDI for year`) -> masterdata
