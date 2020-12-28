@@ -46,7 +46,7 @@ levels(masterdata)
 
 ## Data cleaning - the 'generation' variable
 
-Po wstępnym przeglądzie zdecydowano się na pominięcie w dalszej analizie zmiennej "generation" (pol. pokolenie). W każdej części świata poszczególne pokolenia są nieco inaczej definiowane - np. definicja tzw. millenialsów (pokolenia X) w Stanach Zjednoczonych i Polsce obejmuje różne grupy wiekowe.
+After some consideration it was decided to omit the 'generation' variable in the analysis process. The definition of each generation changes depending on the country, as different countries do not necessarily share their socioeconomic history. For example, the 'millenials' generation in the US and Poland refers to two different age groups. 
 ```{r}
 masterdata %>% 
   select(-generation) -> masterdata
