@@ -69,19 +69,18 @@ masterdata %>%
   select(-`HDI for year`) -> masterdata
 ```
 
-## Czyszczenie danych - zmienna 'year'
+## Data cleaning - the 'year' variable
 
-Poniższy wykres uwzględnia ilość obserwacji ze względu na rok.
-
+The plot below shows the number of observations per year.
 ```{r message=FALSE}
 masterdata %>% 
   select(year) %>% 
   group_by(year) %>% 
-  summarise(l_obserwacji=n()) %>% 
-  ggplot(aes( x = year, y=l_obserwacji)) +
+  summarise(n_observations=n()) %>% 
+  ggplot(aes( x = year, y=n_observations)) +
   geom_col(fill="skyblue") + 
   theme_classic()+
-  labs(title="Liczba obserwacji ze względu na rok", fill= "Liczba obserwacji", x="Rok", y="Liczba obserwacji") +
+  labs(title="Number of observations per year", fill= "Number of observations", x="Year", y="Number of observations") +
   theme(axis.text.x = element_text(angle = 90))+
   scale_x_continuous(breaks = seq(1985, 2016, 1))
 
@@ -103,8 +102,8 @@ Następnym krokiem było uzyskanie informacji na temat liczby obserwacji uzyskan
 masterdata %>% 
   select(country) %>% 
   group_by(country) %>% 
-  summarise(l_obserwacji=n()) %>%
-  arrange(l_obserwacji) %>%
+  summarise(n_observations=n()) %>%
+  arrange(n_observations) %>%
   head(10)
 ```
 
