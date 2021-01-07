@@ -86,18 +86,16 @@ masterdata %>%
 
 ```
 
-
-Ze względu na znacznie niższą liczbę obserwacji w roku 2016, zdecydowano się na pominięcie tej zmiennej w dalszej analizie. Zbyt mała liczba rekordów sprawiłaby, że uzyskane informacje byłyby niemiarodajne. 
+Considering how little observations were recorded in 2016, it was decided to omit this year in further analysis. The low number of observations would affect the end result and cause it to be unreliable.
 ```{r}
 masterdata %>% 
   filter(!year==2016) -> masterdata
 ```
 
 
-## Czyszczenie danych - zmienna 'country'
+## Data cleaning - the 'country' variable
 
-
-Następnym krokiem było uzyskanie informacji na temat liczby obserwacji uzyskanych w poszczególnych krajach. Wyniki posortowana w kolejności od najniższego to najwyższego.
+The next step was to obtain information about the number of observations collected in each country. The results have been sorted according to that number, from lowest to highest.
 ```{r message=FALSE}
 masterdata %>% 
   select(country) %>% 
