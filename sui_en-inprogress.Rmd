@@ -105,15 +105,15 @@ masterdata %>%
   head(10)
 ```
 
+It was decided not to take into the account those countries, whose number of observations wasn't higer than 36. As a result, 7 countries were omitted in the further analysis. 
 
-Podczas dalszej analizy wykluczono kraje, w których liczba obserwacji nie przekroczyła liczby 36 - w rezultacie nie wzięto pod uwagę 7 krajów.
 ```{r}
 masterdata %>%
 filter(!country %in% c("Cabo Verde", "Dominica", "Macau", "Bosnia and Herzegovina", "Oman", "Saint Kitts and Nevis", "San Marino")) -> masterdata
 ```
 
 
-Sprawdzenie, czy występują rekordy puste:
+Checking for null variables:
 ```{r}
 is.null(masterdata)
 ```
